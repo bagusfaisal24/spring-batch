@@ -1,0 +1,22 @@
+---
+version: '3.8'
+services:
+  postgresql:
+    image: postgres:latest
+    container_name: postgresql
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgre-data:/var/lib/postgresql/data
+    environment:
+      # Default user is -> postgres
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_PASSWORD: 'SevenEightTwo782' # Change to your unique password
+    networks:
+      - my-network
+volumes:
+  postgre-data:
+
+networks:
+  my-network:
+    driver: bridge
