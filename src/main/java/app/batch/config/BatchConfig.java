@@ -1,5 +1,6 @@
 package app.batch.config;
 
+import app.batch.listener.JobCompletionListener;
 import app.batch.step.Processor;
 import app.batch.step.Reader;
 import app.batch.step.Writer;
